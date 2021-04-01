@@ -1,0 +1,29 @@
+{% extends 'admintemplates/adminbase.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container">
+    <br>
+	<br>
+
+	<div class="row col-1 container">
+		<div class="col-md-12">
+			<h4><u>Delete Suppliers</u></h4>
+			<form method="post" enctype="multipart/form-data">
+				{% csrf_token %}
+				{{form.as_p}}
+                Are you want to delete this supplier ?
+				<button class="btn btn-primary">Yes</button>
+                <a href="/supplier/list/">Cancel </a>
+
+
+			</form>
+
+		</div>
+		<br>
+
+
+	</div>
+</div>
+
+{% endblock %}
